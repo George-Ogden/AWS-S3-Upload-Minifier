@@ -30,4 +30,4 @@ Handler property should be configured to `minifier.handler` and an event should 
 All dependencies are installed in the zip folder so it can just be uploaded.
 
 ## Thank you
-Thank you to @chilts, who has written the API.
+Thank you to [@chilts](https://github.com/chilts), who has written the API.
