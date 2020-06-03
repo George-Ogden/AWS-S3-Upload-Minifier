@@ -1,6 +1,6 @@
 # HTML, CSS and JS Minifier
 Python 3.8 lambda function to compress the main files in your website.
-The function is designed to run on a create event trigger.
+The function is designed to run on a `PUT` event trigger.
 The function also deletes the file extension of .html to give a more professional feel to a website.
 
 ## Necessary permissions
@@ -10,14 +10,19 @@ In order to modify files, a policy is needed for the lambda function (or you can
     "Version": "2012-10-17",
     "Statement": [
         {
+            "Sid": "VisualEditor0",
             "Effect": "Allow",
             "Action": [
-                "s3:GetObject",
                 "s3:PutObject",
+                "s3:GetObject",
+                "s3:DeleteObjectVersion",
+                "s3:PutLifecycleConfiguration",
+                "s3:ListBucket",
                 "s3:DeleteObject"
             ],
             "Resource": [
-                "arn:aws:s3:::responsiveandready"
+                "arn:aws:s3:::mybucket/*",
+                "arn:aws:s3:::mybucket"
             ]
         }
     ]
