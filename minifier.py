@@ -1,4 +1,3 @@
-import json
 import boto3
 import requests
 urls = {"html":'https://html-minifier.com/raw',"css":"https://cssminifier.com/raw","js":"https://javascript-minifier.com/raw"}
